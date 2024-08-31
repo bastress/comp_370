@@ -1,0 +1,1 @@
+The % of tweets that mention Trump does not take distinguish between a regular tweet and a retweet. This causes some tweets to be counted more than once, thus overrepresenting the percentage of tweets that mention Trump.
