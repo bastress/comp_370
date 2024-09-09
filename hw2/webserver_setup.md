@@ -13,9 +13,9 @@ Add the line "Listen 8008" to /etc/apache2/ports.conf
 
 Add the following to /etc/apache2/sites-available/000-default.conf:
 > &lt;VirtualHost *:8008><br>
->     DocumentRoot /var/www/html <br>
->     ErrorLog ${APACHE_LOG_DIR}/error.log<br>
->     CustomLog ${APACHE_LOG_DIR}/access.log combined<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot /var/www/html <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;ErrorLog ${APACHE_LOG_DIR}/error.log<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;CustomLog ${APACHE_LOG_DIR}/access.log combined<br>
 > &lt;/VirtualHost>
 
 
