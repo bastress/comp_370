@@ -1,5 +1,6 @@
 # Data files
 hw4/*.csv
+hw4/*.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
