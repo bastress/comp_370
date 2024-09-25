@@ -25,5 +25,5 @@ create /var/www/html/comp370_hw2.txt with some text.
 run the following to apply new configuration:
 > sudo systemctl restart apache2
 
-View site at http://15.222.11.150:8008/comp370_hw2.txt
+View site at http://35.183.197.186:8008/comp370_hw2.txt
 
