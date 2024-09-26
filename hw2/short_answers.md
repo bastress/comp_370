@@ -17,4 +17,4 @@
 Data analytics focuses on measuring things to gain concrete new insight, whereas data science focuses on measuring things that haven't been measured before.
 
 ### Give an example of how a loop can occur in the data science process.
-The data science process is iterative. For example, during the data collection phase of a project analyzing the size of apples, you might realize their are stark differences based on the geographic region in which they are grown. This would send you back to the question definition stage where you check in with the stakeholders about the geographical scope of the problem.
+The data science process is iterative. For example, during the data collection phase of a project analyzing the size of apples, you might realize there are stark differences based on the geographic region in which they are grown. This would send you back to the question definition stage where you check in with the stakeholders about the geographical scope of the problem.
