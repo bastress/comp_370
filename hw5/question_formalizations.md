@@ -13,3 +13,10 @@ Version 4: How does the percentage distribution of the causes of 311 noise compl
 
 ### Task 2: Urban Rodents
 
+Version 1: Where in the city are rats and mice most likely to create sanitation issues?
+
+Version 2: What types of buildings/properties are rats and mice most likely to create sanitation issues?
+
+Version 3: What types of buildings/properties are most likely to file complaints of rats and mice?
+
+Version 4: What types of buildings/properties are most likely to file complaints of rodents?
