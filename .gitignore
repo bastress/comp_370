@@ -3,6 +3,8 @@ hw4/*.csv
 hw4/*.ipynb
 hw4/*.tgz
 hw5/*.csv
+hw6/**/*.json
+hw6/*.tgz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
