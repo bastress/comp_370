@@ -1,5 +1,6 @@
 ### Ontology Categories:
 - housing
+- exams
 - courses
 - fun
 - grades
