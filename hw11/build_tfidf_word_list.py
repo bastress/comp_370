@@ -1,9 +1,10 @@
 import argparse
 import json
 import re
+from math import log
 
 
-def build_word_ranking_list(fname, stop_words):
+def build_word_ranking_dict(fname, stop_words):
     with open(fname, 'r') as f:
         data = json.load(f)
     
@@ -16,21 +17,36 @@ def build_word_ranking_list(fname, stop_words):
             if word not in stop_words:
                 words[word] = words[word] + 1 if word in words else 1
 
-    return [[word, words[word]] for word in sorted(words, key=words.get, reverse=True)[:10]]
+    return words
 
 
 def create_word_lists_json(args):
+    master_word_dict = {}
     data = {}
     stop_words = []
     if args.s:
         with open(args.s, 'r') as sf:
             stop_words = json.load(sf)["stop_words"]
 
+    # Get list of dictionaries of word counts for each file
     for in_file in args.filenames:
-        data[in_file] = build_word_ranking_list(in_file, stop_words)
+        data[in_file] = build_word_ranking_dict(in_file, stop_words)
+
+        for word in data[in_file]:
+            master_word_dict[word] = master_word_dict[word] + 1 if word in master_word_dict else 1
+
+    # Replace word count with tfidf score
+    tfidfs = {}
+    for fname in data:
+        words = []
+        for word in data[fname].keys():
+            idf = log(len(data) / master_word_dict[word], 10)
+            tfidf = round(data[fname][word] * idf, 2)
+            words.append([word, tfidf])
+        tfidfs[fname] =  sorted(words, key=lambda x: x[1], reverse=True)[:10]
 
     with open(args.o, 'w') as f:
-        json.dump(data, f, indent=4)
+        json.dump(tfidfs, f, indent=4)
     
 
 def main():
